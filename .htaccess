@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteRule ^home index.php [NC,L]
+RewriteRule ^login login.php [NC,L]
+RewriteRule ^logout logout.php [NC,L]
+RewriteRule ^contact pages/contact.php [NC,L]
+RewriteRule ^activities pages/activities.php [NC,L]
+RewriteRule ^groups pages/groups.php [NC,L]
+RewriteRule ^group pages/group.php [NC,L]
+RewriteRule ^all-members pages/members.php [NC,L]
+RewriteRule ^member-profile pages/member-profile.php [NC,L]
+RewriteRule ^member-groups pages/member-groups.php [NC,L]
+RewriteRule ^member-friends pages/member-friends.php [NC,L]
+RewriteRule ^member-activities pages/member-activities.php [NC,L]
+RewriteRule ^template pages/temp.php [NC,L]

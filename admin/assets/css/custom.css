@@ -1,0 +1,14 @@
+.x-scroll {
+    overflow-x: scroll;
+}
+
+.abs-alert {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+
+.activity {
+    height: 420px;
+    overflow-y: scroll;
+}
